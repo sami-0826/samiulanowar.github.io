@@ -2,85 +2,148 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samiul Anowar</title>
-
 <style>
+html{
+  scroll-behavior:smooth;
+}
 body{
   margin:0;
-  font-family: Arial;
-  background:#0f172a;
-  color:white;
+  font-family: Arial, sans-serif;
+  background:#0b1220;
+  color:#fff;
 }
-
-header{
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:#111a2e;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+nav a{
+  color:#fff;
+  margin:0 10px;
+  text-decoration:none;
+}
+/* HERO */
+.hero{
   text-align:center;
-  padding:60px 20px;
+  padding:80px 20px;
 }
-
-h1{
+.hero h1{
+  font-size:45px;
   color:#f97316;
-  font-size:40px;
 }
-
-section{
-  max-width:900px;
-  margin:20px auto;
-  padding:20px;
-  background:#1e293b;
-  border-radius:10px;
+.hero p{
+  font-size:18px;
+  color:#cbd5e1;
+  max-width:600px;
+  margin:15px auto 0;
 }
-
-h2{
-  color:#38bdf8;
-}
-
+/* BUTTON */
 .btn{
   display:inline-block;
-  padding:10px 20px;
+  margin-top:15px;
+  padding:12px 25px;
   background:#f97316;
   color:white;
   text-decoration:none;
   border-radius:6px;
-  margin-top:10px;
+}
+/* SECTIONS */
+section{
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+  background:#111a2e;
+  border-radius:10px;
+  scroll-margin-top:90px; /* prevents sticky nav from covering section on jump */
+}
+h2{
+  color:#38bdf8;
+}
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+.card{
+  background:#0b1220;
+  padding:15px;
+  border-radius:10px;
+  border:1px solid #1e293b;
+}
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#94a3b8;
 }
 </style>
-
 </head>
-
 <body>
-
-<header>
-  <h1>Samiul Anowar</h1>
-  <p>SEO & Digital Marketing Specialist</p>
-  <a class="btn" href="mailto:yourmail@gmail.com" style="padding:10px 15px; background:#f97316; color:white; text-decoration:none; border-radius:5px;">Contact Me</a>
-</header>
-
-<section>
+<nav>
+  <div><b>Samiul Anowar</b></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+<div class="hero">
+  <h1>SEO & Digital Marketing Specialist</h1>
+  <p>I help businesses grow online through smart SEO strategies and resultdriven digital marketing campaigns.</p>
+  <a class="btn" href="#contact">Hire Me</a>
+</div>
+<section id="about">
   <h2>About Me</h2>
-  <p>I'm an SEO and Digital Marketing Specialist passionate about helping brands grow their online presence through data-driven strategies and creative campaigns.</br> Alongside my professional work, I'm currently pursuing a B.Sc. in Computing and Information System at Daffodil International University, where I'm building a strong technical foundation that complements my digital marketing expertise.</br> I enjoy combining analytical thinking with creative problem-solving to deliver real results, whether it's improving search rankings, driving organic traffic, or crafting effective marketing strategies.</p>
+  <p>I'm an SEO and Digital Marketing Specialist passionate about helping brands grow their online presence through data-driven strategies and creative campaigns.<br> Alongside my professional work, I'm currently pursuing a B.Sc. in Computing and Information System at Daffodil International University, where I'm building a strong technical foundation that complements my digital marketing expertise.<br> I enjoy combining analytical thinking with creative problem-solving to deliver real results, whether it's improving search rankings, driving organic traffic, or crafting effective marketing strategies.</p>
 </section>
-
-<section>
+<section id="skills">
   <h2>Skills</h2>
-  <p>On-Page SEO • Technical SEO • Keyword Research • Paid Ads • Google Search Concole • Google Analytics • wordPress • Canva</p>
+  <div class="grid">
+    <div class="card">On-Page SEO</div>
+    <div class="card">Paid Ads</div>
+    <div class="card">Keyword Research</div>
+    <div class="card">Technical SEO</div>
+    <div class="card">Google Search Console</div>
+    <div class="card">Google Analysis</div>
+    <div class="card">WordPress</div>
+    <div class="card">Canva</div>
+  </div>
 </section>
-
-<section>
+<section id="projects">
   <h2>Projects</h2>
-  <p>✔ SEO Audit<br>
-  ✔ Keyword Research for Local Business<br>
-  ✔ Competitor Analysis Study</p>
+  <div class="grid">
+    <div class="card">
+      <h3>SEO Audit Practice</h3>
+      <p>Analyzed website structure, titles, and speed improvements.</p>
+    </div>
+    <div class="card">
+      <h3>Keyword Research Project</h3>
+      <p>Researched low-competition keywords for local business niche.</p>
+    </div>
+    <div class="card">
+      <h3>Competitor Analysis</h3>
+      <p>Studied top-ranking websites and their SEO strategies.</p>
+    </div>
+  </div>
 </section>
-
-<section>
-<a href="mailto:yourmail@gmail.com" style="padding:10px 15px; background:#f97316; color:white; text-decoration:none; border-radius:5px;">
-  Email
-</a>
-
-<a href="https://linkedin.com/in/yourprofile" target="_blank" style="padding:10px 15px; background:#38bdf8; color:white; text-decoration:none; border-radius:5px; margin-left:10px;">
-  LinkedIn
-</a>
+<section id="contact">
+  <h2>Contact</h2>
+  <a href="mailto:samiulanowarofficial@gmail.com" style="padding:10px 15px; background:#f97316; color:white; text-decoration:none; border-radius:5px;">
+    Email
+  </a>
+  <a href="https://www.linkedin.com/in/samiul-anowar-2b4325414/" target="_blank" style="padding:10px 15px; background:#38bdf8; color:white; text-decoration:none; border-radius:5px; margin-left:10px;">
+    LinkedIn
+  </a>
 </section>
-
+<footer>
+  © 2026 Sami | SEO & Digital Markting Specialist
+</footer>
 </body>
-</html>Put your HTML text here
+</html>
